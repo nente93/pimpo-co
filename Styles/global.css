@@ -1,0 +1,202 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+  font-family: Sans-Serif;
+}
+.container-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* navbar styles */
+.navbar{
+  height: 60px;
+  width: 100%;
+  overflow: hidden; 
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d4d4d4;
+} 
+.logo{
+  margin-left: 8%; 
+}
+.logo a{
+  text-decoration: none; 
+  color: rgb(65, 19, 19); 
+}
+.logo h4{
+  font-size: 1.6rem; 
+  cursor: pointer;
+}
+
+/* menu */
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8%; 
+  cursor: pointer; 
+}
+.hamburger span{
+  width: 30px; 
+  height: 3px;
+  background-color: rgb(65, 19, 19);
+  margin: 5px;
+  border-radius: 5px; 
+}
+
+/* navlinks */
+.navlinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;  
+  height: 50vh;
+  background-color: #000;
+  background-color: rgba(0,0,0,0.7);
+  top: -450px;   
+  border-bottom: 1px solid red; 
+  transition: all .5s ease-in-out;
+  z-index: 1111; 
+} 
+.navlinks.active{
+  top: 60px; 
+  transition-delay: .3s;
+}
+.navlinks::before{
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: red; 
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-bottom-left-radius:50px;
+}
+
+/* navlinks items */
+.items{
+  padding: 1rem 2rem; 
+  margin-bottom: .5rem; 
+  text-decoration: none;
+  font-size: 1.5rem; 
+  color: #fff;
+  transition: all .5s ease-in-out;
+}  
+.items:hover{
+  background-color: #fff;
+  color: #000; 
+  border-radius: 5px;  
+}
+
+/* footer */
+#footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8% 0 ; 
+  background-color: rgb(65,19,19);
+}
+.footer-logo a{
+  color: #fff;
+  font-size: 1.5rem ;
+  text-decoration: none;
+}
+.footer-navlinks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.7rem; 
+}
+.footer-navlinks a{
+  padding: .5rem ;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem ;
+  text-transform: capitalize ;
+}
+.order{
+  margin: 1.7rem 0 ;
+}
+.order a{
+  border: 2px solid rgb(249,174,11); 
+  color: #fff;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.2rem ;
+  padding: .5rem 1rem; 
+  -moz-border-radius: 8px;
+  border-radius: 8px; 
+}
+.copy{
+  text-align: center;
+}
+.copy p{
+  color: #fff;
+}
+.copy > p:nth-child(2){
+  font-size: .7rem;
+  margin-top: 10px;
+}
+
+
+
+
+/* WHEN SCREEN IS BIGGER THAN 768PX THIS STYLE WILL APPLY */
+@media all and (min-width: 768px) {
+  .navbar{
+    border: none;
+    justify-content: center;
+    border-bottom: 1px solid rgb(189, 189, 189);
+  }
+  .logo{
+    width: 300px;
+  }
+  .navlinks{
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    height: 0;
+    width: 0;
+    border: none;
+    flex: 1;
+    margin-right: 8%;
+  }
+  .navlinks::before{
+    display: none;
+  }
+  .items{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    margin-left: 20px;
+    color: rgb(65, 19, 19);
+  }
+  .hamburger{
+    display: none;
+  }
+  #footer{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3% 0 ;
+  }
+  .footer-navlinks{
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0; 
+  }
+}

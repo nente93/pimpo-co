@@ -1,0 +1,68 @@
+h3{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(65, 19, 19);
+    text-align: center;
+}
+h5{
+    margin-bottom: 1.4rem;
+    color: rgb(11, 22, 61);
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+p{
+    line-height: 1.5;
+    color: rgb(75, 75, 75);
+}
+.blog{
+    width: 100%;
+    margin-top: 5%;
+}
+.blog-wrapper{
+    width: 90%;
+    margin: 2% auto 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.customer-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgb(223, 255, 237);
+    margin-bottom: 1.4rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.img-1{
+    background-image: url(/images/YoungSter-2.jpg);
+}
+.img-2{
+    background-image: url(/images/YoungSter-3.jpg);
+}
+.img-3{
+    background-image: url(/images/YoungSter-4.jpg);
+}
+.blog-items{
+    background-color: silver;
+    margin: 1rem 0;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+
+/* WHEN SCREEN IS BIGGER THAN 768PX THIS STYLE WILL APPLY */
+
+@media all and (min-width: 768px){
+    .blog-wrapper{
+        flex-direction: row;
+    }
+    .blog-items{
+        margin-right: 10px;
+    }
+    .blog-wrapper:nth-child(3){
+        margin-right: 0;
+    }
+}
